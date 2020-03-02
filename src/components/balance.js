@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { BalanceContext } from 'state'
 
-const Balance = () => (
-  <div>
-    <h1>Balance</h1>
-    <p>2,000</p>
-    <p>Overdraft reached!</p>
-  </div>
-)
+const Balance = () => {
+  const { balance } = useContext(BalanceContext)
+
+  return (
+    <div>
+      <h1>Balance</h1>
+      <p>{balance}</p>
+      <p>Overdraft reached!</p>
+    </div>
+  )
+}
 
 export default Balance

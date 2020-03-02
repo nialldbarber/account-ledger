@@ -1,14 +1,15 @@
 import React from 'react'
+import { BalanceProvider } from 'state'
 import Header from 'components/header'
 import Row from 'components/row'
 import Modal from 'components/modal'
 
 const App = () => (
-  <div>
+  <BalanceProvider>
     <Header />
     <Row />
     <Modal />
-  </div>
+  </BalanceProvider>
 )
 
 export default App
