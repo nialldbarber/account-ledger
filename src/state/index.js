@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react'
 import uuid4 from 'uuidv4'
 import { balanceReducer } from 'state/reducers/balance'
-import { DEPOSIT, WITHDRAW } from 'constants/transaction-types'
+import { DEPOSIT, WITHDRAW, OPEN_DEPOSIT, OPEN_WITHDRAW } from 'constants/transaction-types'
 
 const initialState = {
   balance: 2000,
@@ -35,15 +35,28 @@ const initialState = {
     //   type: DEPOSIT
     // },
   // ]
+  depositModal: false,
+  withdrawModal: false
 }
 
 export const BalanceContext = createContext(initialState)
 
 export const BalanceProvider = (props) => {
   const [state, dispatch] = useReducer(balanceReducer, initialState)
-  
+
   const addMoney = (amount) => dispatch({ type: DEPOSIT, amount })
   const withdrawMoney = (amount) => dispatch({ type: WITHDRAW, amount })
 
-  return <BalanceContext.Provider value={{ balance: state.balance, addMoney, withdrawMoney }} {...props} />
+  const openDepositModal = () => dispatch({ type: OPEN_DEPOSIT })  
+  const openWithdrawModal = () => dispatch({ type: OPEN_WITHDRAW })
+
+  return <BalanceContext.Provider value={{ 
+    balance: state.balance, 
+    depositModal: state.depositModal,
+    withdrawModal: state.withdrawModal,
+    addMoney, 
+    withdrawMoney,
+    openDepositModal,
+    openWithdrawModal
+  }} {...props} />
 }

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { BalanceContext } from 'state'
 import useForm from 'hooks/useForm'
 
-const Modal = ({ type }) => {
+const Modal = ({ type, visibility }) => {
   const { addMoney, withdrawMoney } = useContext(BalanceContext)
   const { value, handleChange } = useForm('')
 
@@ -13,8 +13,8 @@ const Modal = ({ type }) => {
   }
 
   return (
-    <div>
-      <p>Some blurb...</p>
+    <div style={{ opacity: visibility ? '1' : 0 }}>            
+      <p>{type} blurb...</p>
       <form onSubmit={handleSubmit}>
         <input type="text" value={value} onChange={handleChange} />
         <button type="submit">

@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { BalanceContext } from 'state'
 
-const AddWithdraw = () => (
-  <div>
+const AddWithdraw = () => {
+  const { openDepositModal, openWithdrawModal } = useContext(BalanceContext)
+
+  return (
     <div>
-      <p>Deposit</p>
-      <button>+</button>
+      <div>
+        <p>Deposit</p>
+        <button onClick={() => openDepositModal()}>+</button>
+      </div>
+      <div>
+        <p>Withdraw</p>
+        <button onClick={() => openWithdrawModal()}>-</button>
+      </div>
     </div>
-    <div>
-      <p>Withdraw</p>
-      <button>-</button>
-    </div>
-  </div>
-)
+  )
+}
 
 export default AddWithdraw
