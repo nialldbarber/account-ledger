@@ -1,3 +1,10 @@
+# 90's Account Ledger
+
+- Todo: description of what I've done
+- More things I could have done
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -30,7 +37,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
----
-
-# 90's Account Ledger
