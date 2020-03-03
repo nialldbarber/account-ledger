@@ -1,14 +1,15 @@
 import { useState } from 'react'
 
-const useForm = (initialState) => {
-  const [value, setValue] = useState(initialState)
+const useForm = (initialState = {}) => {
+  const [values, setValue] = useState(initialState)
 
   const handleChange = (e) => {
-    setValue(e.target.value)
+    const { name, value } = e.target
+    setValue({ ...values, [name]: value })
   }
 
   return {
-    value,
+    values,
     handleChange
   }
 }

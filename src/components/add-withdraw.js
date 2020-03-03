@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { BalanceContext } from 'state'
+import { ModalContext } from 'state/context/modal'
 
 const AddWithdraw = () => {
-  const { openDepositModal, openWithdrawModal } = useContext(BalanceContext)
+  const { openDepositModal, openWithdrawModal } = useContext(ModalContext)
 
   return (
     <div>

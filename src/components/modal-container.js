@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { BalanceContext } from 'state'
+import { ModalContext } from 'state/context/modal'
 import Modal from 'components/modal'
 
 const ModalContainer = () => {
-  const { depositModal, withdrawModal } = useContext(BalanceContext)  
+  const { depositModal, withdrawModal } = useContext(ModalContext)  
 
   return (
     <div>

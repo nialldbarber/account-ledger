@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { BalanceContext } from 'state/context/balance'
+import { DEPOSIT } from 'constants/transaction-types'
+import { RowLine } from 'styles/row'
 
-const Row = () => (
-  <div>
-    <p>20/2</p>
-    <p>EE</p>
-    <p>60.00</p>
-  </div>
-)
+const Row = () => {
+  const { transactions } = useContext(BalanceContext)
+
+  console.log(transactions)
+
+  return (
+    <div>
+      {transactions.map(({ id, date, amount, item, type }) => (
+        <RowLine key={id}>
+          <p>{date}</p>
+          <p>{item}</p>
+          <p style={{ color: type === DEPOSIT ? '#04BA4D' : 'black' }}>{amount}</p>
+        </RowLine>
+      ))}
+    </div>
+  )
+}
 
 export default Row
