@@ -1,20 +1,21 @@
 import React, { useContext } from 'react'
 import { ModalContext } from 'state/context/modal'
+import { Container, Controls, Button } from 'styles/add-withdraw'
 
 const AddWithdraw = () => {
   const { openDepositModal, openWithdrawModal } = useContext(ModalContext)
 
   return (
-    <div>
-      <div>
+    <Container>
+      <Controls>
         <p>Deposit</p>
-        <button onClick={() => openDepositModal()}>+</button>
-      </div>
-      <div>
+        <Button onClick={() => openDepositModal()}>+</Button>
+      </Controls>
+      <Controls>
         <p>Withdraw</p>
-        <button onClick={() => openWithdrawModal()}>-</button>
-      </div>
-    </div>
+        <Button onClick={() => openWithdrawModal()}>-</Button>
+      </Controls>
+    </Container>
   )
 }
 

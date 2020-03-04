@@ -4,6 +4,7 @@ import { BalanceContext } from 'state/context/balance'
 import { ModalContext } from 'state/context/modal'
 import useForm from 'hooks/useForm'
 import { DEPOSIT, WITHDRAW } from 'constants/transaction-types'
+import { Container } from 'styles/modal'
 
 const Modal = ({ type, visibility }) => {
   const { addMoney, withdrawMoney } = useContext(BalanceContext)
@@ -18,12 +19,16 @@ const Modal = ({ type, visibility }) => {
 
   const { date, item, amount } = values
 
+  // this function needs to find out if its credit/debit
+  // add the item to the transaction array
+  // not submit if any field is empty
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (type === 'deposit') {
       const newItem = {
         id: uuidv4(),
-        date,
+        date: Date.now(),
         item,
         amount,
         type: DEPOSIT
@@ -32,26 +37,21 @@ const Modal = ({ type, visibility }) => {
     } else {
       const newItem = {
         id: uuidv4(),
-        date,
+        date: Date.now(),
         item,
         amount,
         type: WITHDRAW
       }
       withdrawMoney(newItem)
     }
+    closeAllModals()
   }
 
   return (
-    <div style={{ opacity: visibility ? '1' : 0 }}>
+    <Container className={visibility ? 'active' : ''}>
       <button onClick={() => closeAllModals()}>CLOSE</button>
       <p>{type} blurb...</p>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="date"
-          value={date}
-          onChange={handleChange}
-        />
         <input
           type="text"
           value={item}
@@ -69,7 +69,7 @@ const Modal = ({ type, visibility }) => {
           {type === 'deposit' ? 'deposit' : 'withdraw'}
         </button>
       </form>
-    </div>
+    </Container>
   )
 }
 
