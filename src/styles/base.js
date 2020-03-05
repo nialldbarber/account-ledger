@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
-import background from 'assets/background.jpg'
+import { fontFaces } from 'styles/font/font'
+import background from 'assets/modalBg.png'
 
 export const GlobalStyle = createGlobalStyle`
+  ${fontFaces};
+
   * {
     box-sizing: inherit;
     text-rendering: optimizeLegibility;
@@ -21,10 +24,9 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     background-image: url(${background});
     background-repeat: repeat;
-    background-size: cover;
     margin: 0;
     padding: 0;
-    font-family: ${(props) => props.theme.font};
+    font-family: ${props => props.theme.font};
   }
 
   a {
@@ -51,9 +53,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    max-width: 800px;
-    background: white;
+    max-width: 750px;
+    background: ${props => props.theme.grey};
     margin: 4rem auto;
-    border: 5px solid black;
+    border: 2px solid #cfcfcf;
   }
 `

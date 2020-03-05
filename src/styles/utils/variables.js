@@ -1,4 +1,8 @@
 export const theme = {
-  font: "'Roboto Mono', monospace",
-  padding: '2rem'
+  font: 'ms',
+  padding: '2rem',
+  white: '#fff',
+  grey: '#BDBDBD',
+  blue: '#1200f4',
+  yellow: '#fdf500' 
 }

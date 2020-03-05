@@ -6,6 +6,8 @@ import useForm from 'hooks/useForm'
 import { DEPOSIT, WITHDRAW } from 'constants/transaction-types'
 import { getDayAndMonthFromDate } from 'utils'
 import { Container } from 'styles/modal'
+import { Button } from 'styles/button'
+import cross from 'assets/cross.svg'
 
 const Modal = ({ type, visibility }) => {
   const { addMoney, withdrawMoney } = useContext(BalanceContext)
@@ -50,7 +52,9 @@ const Modal = ({ type, visibility }) => {
 
   return (
     <Container className={visibility ? 'active' : ''}>
-      <button onClick={() => closeAllModals()}>CLOSE</button>
+      <button className="exit" onClick={() => closeAllModals()}>
+        <img src={cross} alt="exit" />
+      </button>
       <p>{type} blurb...</p>
       <form onSubmit={handleSubmit}>
         <input
@@ -66,9 +70,9 @@ const Modal = ({ type, visibility }) => {
           onChange={handleChange}
           placeholder="Amount"
         />
-        <button type="submit">
+        <Button type="submit">
           {type === 'deposit' ? 'deposit' : 'withdraw'}
-        </button>
+        </Button>
       </form>
     </Container>
   )

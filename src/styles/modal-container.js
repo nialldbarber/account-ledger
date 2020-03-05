@@ -13,12 +13,13 @@ export const Wrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: ${props => props.theme.grey};
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   width: 500px;
   height: 350px;
   z-index: 5;
 `
-
+ 
 export const WrapperInner = styled.div`
   position: relative
 `
