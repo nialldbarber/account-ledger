@@ -4,6 +4,7 @@ import { BalanceContext } from 'state/context/balance'
 import { ModalContext } from 'state/context/modal'
 import useForm from 'hooks/useForm'
 import { DEPOSIT, WITHDRAW } from 'constants/transaction-types'
+import { getDayAndMonthFromDate } from 'utils'
 import { Container } from 'styles/modal'
 
 const Modal = ({ type, visibility }) => {
@@ -28,7 +29,7 @@ const Modal = ({ type, visibility }) => {
     if (type === 'deposit') {
       const newItem = {
         id: uuidv4(),
-        date: Date.now(),
+        date: getDayAndMonthFromDate(),
         item,
         amount,
         type: DEPOSIT
@@ -37,7 +38,7 @@ const Modal = ({ type, visibility }) => {
     } else {
       const newItem = {
         id: uuidv4(),
-        date: Date.now(),
+        date: getDayAndMonthFromDate(),
         item,
         amount,
         type: WITHDRAW
