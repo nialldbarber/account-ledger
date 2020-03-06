@@ -55,7 +55,13 @@ export const GlobalStyle = createGlobalStyle`
   main {
     max-width: 750px;
     background: ${props => props.theme.grey};
-    margin: 4rem auto;
-    border: 2px solid #cfcfcf;
+    margin: 4rem auto;    
+    background-color: silver;
+    padding: 1px;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #848484;
+    border-bottom: 1px solid #848484;
+    box-shadow: 1px 1px 0 #000;      
   }
 `

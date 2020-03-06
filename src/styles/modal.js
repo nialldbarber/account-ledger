@@ -18,10 +18,18 @@ export const Container = styled.div`
     top: 1.5rem;
     margin: 0;
     padding: 0;
+    background: ${props => props.theme.grey};
 
     img {
       width: 20px;
       height: 20px;
     }
-  }  
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: repeat(3, 40px);
+    grid-gap: 20px;
+    padding: 1rem 3rem;
+  }
 `
