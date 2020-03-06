@@ -7,6 +7,7 @@ import { GlobalStyle } from 'styles/base'
 import Header from 'components/header'
 import Row from 'components/row'
 import ModalContainer from 'components/modal-container'
+import Footer from 'components/footer'
 
 const App = () => (
   <ThemeProvider theme={theme}>
@@ -18,6 +19,7 @@ const App = () => (
           <Row />
           <ModalContainer />
         </main>
+        <Footer />
       </ModalProvider>
     </BalanceProvider>
   </ThemeProvider>

@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import { fontFaces } from 'styles/font'
 import { borderMixin } from 'styles/utils/mixins'
-import { perspectiveChange } from 'styles/utils/keyframes'
+import background from 'assets/cool-background.png'
+import fire from 'assets/divider.gif'
 
 export const GlobalStyle = createGlobalStyle`
   ${fontFaces};
@@ -23,15 +24,21 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     position: relative;
-    
+    background-image: url(${background});
     background-repeat: repeat;
     margin: 0;
     padding: 0;
     font-family: ${props => props.theme.font};
 
-    background: linear-gradient(270deg, #6feae6, #f6a3ef);
-    background-size: 400% 400%;
-    animation: ${perspectiveChange} 3s ease infinite;
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url(${fire});
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+    }
   }
 
   a {
@@ -61,9 +68,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    max-width: 750px;
+    max-width: 720px;
     background: ${props => props.theme.grey};
-    margin: 4rem auto;    
+    margin: 5rem auto 0rem;
     background-color: silver;
     padding: 3rem 1rem 1rem 1rem;
     ${borderMixin};
