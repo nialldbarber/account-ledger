@@ -6,8 +6,6 @@ import { RowLine } from 'styles/row'
 const Row = () => {
   const { transactions } = useContext(BalanceContext)
 
-  console.log(transactions)
-
   return (
     <div>
       {transactions.map(({ id, date, amount, item, type }) => (

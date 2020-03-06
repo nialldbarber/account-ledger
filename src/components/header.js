@@ -1,19 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
+import { BalanceContext } from 'state/context/balance'
 import Balance from 'components/balance'
 import AddWithdraw from 'components/add-withdraw'
+import { OVERDRAFT } from 'constants/transaction-types'
+import { Container, AccountDetails } from 'styles/header'
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 7fr 4fr;
-  border-bottom: 1px solid ${props => props.theme.grey};
-`
+const Header = () => {
+  const { balance } = useContext(BalanceContext)
 
-const Header = () => (
-  <Container>
-    <Balance />
-    <AddWithdraw />
-  </Container>
-)
+  return (
+    <>
+      <Container>
+        <Balance />
+        <AddWithdraw />
+      </Container>
+      <AccountDetails>
+        <p>Overdraft: £250</p>
+        <p>Available: £{balance - OVERDRAFT}</p>
+        <p>Saving Target: £4,000</p>
+      </AccountDetails>    
+    </>
+  )
+}
 
 export default Header
