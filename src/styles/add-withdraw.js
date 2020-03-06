@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { buttonMixin } from 'styles/utils/mixins'
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +11,8 @@ export const Controls = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
+  padding-right: 2rem;
 
   &.disabled {
     opacity: 0.4;
@@ -32,6 +34,11 @@ export const Controls = styled.div`
 `
 
 export const Button = styled.button`
-  padding: 0.5rem 1rem;
   border: 1px solid black;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  ${buttonMixin};
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
 `

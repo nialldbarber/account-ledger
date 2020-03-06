@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { buttonMixin } from 'styles/utils/mixins'
 
 export const Container = styled.div`  
   position: absolute;
@@ -33,18 +34,7 @@ export const Container = styled.div`
     top: 0.3rem;
     margin: 0;
     padding: 0;
-    background: ${props => props.theme.grey};
-
-    width: 20px;
-    height: 20px;
-    margin: 6px 6px 0 0;
-    cursor: pointer;
-    background-color: silver;
-    border-top: 1px solid ${props => props.theme.white};
-    border-left: 1px solid ${props => props.theme.white};
-    border-right: 1px solid gray;
-    border-bottom: 1px solid gray; 
-    box-shadow: 1px 1px 0 ${props => props.theme.black};
+    ${buttonMixin};
 
     img {
       width: 100%;

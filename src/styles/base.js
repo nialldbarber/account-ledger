@@ -69,6 +69,8 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     max-width: 720px;
+    max-height: 80vh;
+    overflow: auto;
     background: ${props => props.theme.grey};
     margin: 5rem auto 0rem;
     background-color: silver;
