@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { borderMixin } from 'styles/utils/mixins'
 
 export const Container = styled.div`
   display: none;
@@ -18,6 +19,7 @@ export const Wrapper = styled.div`
   width: 500px;
   height: 350px;
   z-index: 5;
+  ${borderMixin};
 `
  
 export const WrapperInner = styled.div`

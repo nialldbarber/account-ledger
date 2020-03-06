@@ -5,13 +5,12 @@ import AddWithdraw from 'components/add-withdraw'
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid #9c9b9b;
+  grid-template-columns: 7fr 4fr;
+  border-bottom: 1px solid ${props => props.theme.grey};
 `
 
 const Header = () => (
   <Container>
-    <div />
     <Balance />
     <AddWithdraw />
   </Container>

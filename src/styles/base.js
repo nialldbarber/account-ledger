@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import { fontFaces } from 'styles/font/font'
-import background from 'assets/modalBg.png'
+import { fontFaces } from 'styles/font'
+import { borderMixin } from 'styles/utils/mixins'
+import { perspectiveChange } from 'styles/utils/keyframes'
 
 export const GlobalStyle = createGlobalStyle`
   ${fontFaces};
@@ -22,11 +23,15 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     position: relative;
-    background-image: url(${background});
+    
     background-repeat: repeat;
     margin: 0;
     padding: 0;
     font-family: ${props => props.theme.font};
+
+    background: linear-gradient(270deg, #6feae6, #f6a3ef);
+    background-size: 400% 400%;
+    animation: ${perspectiveChange} 3s ease infinite;
   }
 
   a {
@@ -43,6 +48,9 @@ export const GlobalStyle = createGlobalStyle`
   textarea {
     border: none;
     outline: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: ${props => props.theme.font};
   }
 
   button {
@@ -57,11 +65,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.grey};
     margin: 4rem auto;    
     background-color: silver;
-    padding: 1px;
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #848484;
-    border-bottom: 1px solid #848484;
-    box-shadow: 1px 1px 0 #000;      
+    padding: 3rem 1rem 1rem 1rem;
+    ${borderMixin};
   }
 `

@@ -7,9 +7,24 @@ export const Container = styled.div`
 `
 
 export const Controls = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  &.disabled {
+    opacity: 0.4;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+    }
+  }
 
   p {
     margin: 0;

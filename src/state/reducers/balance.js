@@ -5,7 +5,7 @@ export const balanceReducer = (state, action) => {
     case DEPOSIT:
       return {
         ...state,
-        balance: state.balance + parseInt(action.amount.amount),
+        balance: state.balance + action.amount.amount,
         transactions: [
           ...state.transactions, {
             id: action.amount.id,
@@ -19,7 +19,7 @@ export const balanceReducer = (state, action) => {
     case WITHDRAW:
       return {
         ...state,
-        balance: state.balance - parseInt(action.amount.amount),
+        balance: state.balance - action.amount.amount,
         transactions: [
           ...state.transactions, {
             id: action.amount.id,

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import button from 'assets/button.png'
 
 export const Button = styled.button`
   width: calc(50% - 10px);
@@ -11,6 +12,10 @@ export const Button = styled.button`
   color: ${props => props.theme.blue};
   font-family: ${props => props.theme.font};
   font-size: 1rem;
+
+  background: url(${button}) 0 0/100% auto no-repeat;
+  position: relative;
+  outline: 2px solid #1200f4;
 
   &:hover {
     color: ${props => props.theme.yellow};
