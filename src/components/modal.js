@@ -20,7 +20,7 @@ const Modal = ({ type, visibility }) => {
     type: ''
   })
 
-  const { date, item, amount } = values
+  const { item, amount } = values
 
   // this function needs to find out if its credit/debit
   // add the item to the transaction array
