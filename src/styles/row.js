@@ -11,10 +11,6 @@ export const RowLine = styled.div`
       display: flex;
       justify-content: flex-end;
       font-weight: bold;
-
-      &.deposit {
-        color: ${props => props.theme.green};
-      }
     }
   }
 `

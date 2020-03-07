@@ -17,8 +17,8 @@ export const Header = styled.h1`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 7fr 4fr;
-  border-bottom: 1px solid ${props => props.theme.grey};
-  padding: 0 1rem;
+  border-bottom: 1px solid ${props => props.theme.darkGrey};
+  margin: 0 1rem 1rem;
 `
 
 export const AccountDetails = styled.div`

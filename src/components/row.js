@@ -7,12 +7,12 @@ const Row = () => {
   const { transactions } = useContext(BalanceContext)
 
   return (
-    <div>
-      {transactions.reverse().map(({ id, date, amount, item, type }) => (
+    <div style={{ display: 'flex', flexDirection: 'column-reverse' }}>
+      {transactions.map(({ id, date, amount, item, type }) => (
         <RowLine key={id}>
           <p>{date}</p>
           <p>{item}</p>
-          <p className={type === DEPOSIT ? 'deposit' : ''}>{amount}</p>
+          <p>{type === DEPOSIT ? `+ ${amount}` : amount}</p>
         </RowLine>
       ))}
     </div>
