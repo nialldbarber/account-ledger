@@ -5,6 +5,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  hr {
+    margin-left: 2rem;
+  }
 `
 
 export const Controls = styled.div`
@@ -12,7 +16,6 @@ export const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 2rem;
 
   &.disabled {
     opacity: 0.4;

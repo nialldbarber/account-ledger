@@ -12,7 +12,7 @@ const Row = () => {
         <RowLine key={id}>
           <p>{date}</p>
           <p>{item}</p>
-          <p style={{ color: type === DEPOSIT ? '#04BA4D' : 'black' }}>{amount}</p>
+          <p className={type === DEPOSIT ? 'deposit' : ''}>{amount}</p>
         </RowLine>
       ))}
     </div>

@@ -15,9 +15,9 @@ const Header = () => {
         <AddWithdraw />
       </Container>
       <AccountDetails>
-        <p>Overdraft: £250</p>
-        <p>Available: £{balance - OVERDRAFT}</p>
-        <p>Saving Target: £4,000</p>
+        <p className="overdraft">Overdraft: £250</p>
+        <p className="available">Available: £{balance - OVERDRAFT}</p>
+        <p className="target">Saving Target: £4,000</p>
       </AccountDetails>    
     </>
   )

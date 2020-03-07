@@ -15,6 +15,7 @@ const AddWithdraw = () => {
           <p>Deposit</p>
           <Button onClick={() => openDepositModal()}>+</Button>
         </Controls>
+        <hr />
         <Controls className={balance <= OVERDRAFT ? 'disabled' : ''}>
           <p>Withdraw</p>
           <Button onClick={() => openWithdrawModal()}>-</Button>
