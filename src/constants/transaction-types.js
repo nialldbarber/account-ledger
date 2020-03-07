@@ -7,8 +7,9 @@ export const CLOSE_ALL_MODALS = 'CLOSE_ALL_MODALS'
 
 export const SAVING_REACHED = 4000
 export const OVERDRAFT = -250
+export const IN_OVERDRAFT = -1
 
 export const ACCOUNT_COLOUR_MAP = {
   [SAVING_REACHED]: 'saving-reached',
-  [OVERDRAFT]: 'overdraft-reached'
+  [IN_OVERDRAFT]: 'overdraft-reached'
 }

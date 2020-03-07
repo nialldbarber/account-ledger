@@ -25,10 +25,10 @@ export const BalanceAmount = styled.p`
   ${borderMixin};
 
   &.saving-reached {
-    color: blue;
+    color: ${props => props.theme.blue};
   }
 
   &.overdraft-reached {
-    color: red;
+    color: ${props => props.theme.red};
   }  
 `

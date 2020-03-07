@@ -1,4 +1,4 @@
-import { SAVING_REACHED, OVERDRAFT } from 'constants/transaction-types'
+import { SAVING_REACHED, IN_OVERDRAFT } from 'constants/transaction-types'
 
 /**
  * Get class name based on account balance
@@ -10,8 +10,8 @@ export const getAccountClassName = (balance) => {
 
   if (balance >= SAVING_REACHED) {
     accountClass = SAVING_REACHED
-  } else if (balance <= OVERDRAFT) {
-    accountClass = OVERDRAFT
+  } else if (balance <= IN_OVERDRAFT) {
+    accountClass = IN_OVERDRAFT
   } else {
     accountClass = ''
   }
