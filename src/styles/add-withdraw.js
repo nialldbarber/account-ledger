@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
 
+  .controls {
+    margin-top: 1rem;
+  }
+
   hr {
     margin-left: 2rem;
   }

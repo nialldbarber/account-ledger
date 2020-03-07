@@ -4,6 +4,7 @@ import button from 'assets/button.png'
 export const Button = styled.button`
   width: calc(50% - 10px);
   margin-top: 10px;
+  margin-left: auto;
   height: 40px;
   position: relative;
   outline: 2px solid ${props => props.theme.blue};

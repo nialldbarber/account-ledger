@@ -31,7 +31,7 @@ export const Container = styled.div`
   .exit {
     position: absolute;
     right: 0.5rem;
-    top: 0.3rem;
+    top: 0.2rem;
     margin: 0;
     padding: 0;
     ${buttonMixin};

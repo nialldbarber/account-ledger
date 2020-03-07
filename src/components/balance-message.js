@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { BalanceContext } from 'state/context/balance'
 import { numberWithCommas } from 'utils'
-import { IN_OVERDRAFT } from 'constants/transaction-types'
+import { IN_OVERDRAFT, SAVING_REACHED } from 'constants/transaction-types'
 import { ErrorMessage } from 'styles/header'
 
 const BalanceMessage = () => {
@@ -14,7 +14,7 @@ const BalanceMessage = () => {
     } else if (balance <= IN_OVERDRAFT) {
       setMessage("You're in your overdraft")
     } else {
-      setMessage('')
+      setMessage(`You're £${numberWithCommas(SAVING_REACHED - balance)} away from your goal!`)
     }
   }, [balance, difference])
 
