@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { BalanceContext } from 'state/context/balance'
+import { numberWithCommas } from 'utils'
 import { DEPOSIT } from 'constants/transaction-types'
 import { RowLine } from 'styles/row'
 
@@ -12,7 +13,7 @@ const Row = () => {
         <RowLine key={id}>
           <p>{date}</p>
           <p>{item}</p>
-          <p>{type === DEPOSIT ? `+ ${amount}` : amount}</p>
+          <p>{type === DEPOSIT ? `+ ${numberWithCommas(amount)}` : numberWithCommas(amount)}</p>
         </RowLine>
       ))}
     </div>

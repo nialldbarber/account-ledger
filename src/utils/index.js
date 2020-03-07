@@ -3,7 +3,7 @@ import { SAVING_REACHED, IN_OVERDRAFT } from 'constants/transaction-types'
 /**
  * Get class name based on account balance
  * 
- * @param {*} balance
+ * @param {*} balance string
  */
 export const getAccountClassName = (balance) => {
   let accountClass
@@ -31,4 +31,14 @@ export const getDayAndMonthFromDate = () => {
   if (month < 10) month = `0${month}`
 
   return `${day}/${month}`
+}
+
+/**
+ * Formats number to add commas where necessary
+ * Function taken from https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+ *  
+ * @param {*} number number
+ */
+export const numberWithCommas = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }

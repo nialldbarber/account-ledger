@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { BalanceContext } from 'state/context/balance'
-import { getAccountClassName } from 'utils'
+import { getAccountClassName, numberWithCommas } from 'utils'
 import { ACCOUNT_COLOUR_MAP } from 'constants/transaction-types'
 import { Container, BalanceAmount } from 'styles/balance-amount'
 import { Header } from 'styles/header'
@@ -15,7 +15,7 @@ const Balance = () => {
         <img src={logo} alt="Logo" />
       </Header>
       <p className="strapline">Current Balance</p>
-      <BalanceAmount className={ACCOUNT_COLOUR_MAP[getAccountClassName(balance)]}>£{balance}</BalanceAmount>
+      <BalanceAmount className={ACCOUNT_COLOUR_MAP[getAccountClassName(balance)]}>£{numberWithCommas(balance)}</BalanceAmount>
     </Container>
   )
 }
