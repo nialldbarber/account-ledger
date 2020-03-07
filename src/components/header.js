@@ -2,11 +2,12 @@ import React, { useContext } from 'react'
 import { BalanceContext } from 'state/context/balance'
 import Balance from 'components/balance'
 import AddWithdraw from 'components/add-withdraw'
+import BalanceMessage from 'components/balance-message'
 import { OVERDRAFT } from 'constants/transaction-types'
-import { Container, ErrorMessage, AccountDetails } from 'styles/header'
+import { Container, AccountDetails } from 'styles/header'
 
 const Header = () => {
-  const { balance, difference } = useContext(BalanceContext)
+  const { balance } = useContext(BalanceContext)
 
   return (
     <>
@@ -14,11 +15,7 @@ const Header = () => {
         <Balance />
         <AddWithdraw />
       </Container>
-      {difference ? (
-        <ErrorMessage>
-          {difference ? `We were only able to withdraw £${difference}` : ''}
-        </ErrorMessage>
-      ) : ''}
+      <BalanceMessage />
       <AccountDetails>
         <p className="overdraft">Overdraft: £250</p>
         <p className="available">Available: £{balance - OVERDRAFT}</p>
