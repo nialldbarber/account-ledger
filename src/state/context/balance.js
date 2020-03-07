@@ -8,31 +8,31 @@ const initialState = {
   transactions: [
     {
       id: uuidv4(),
-      date: '20/2',
-      item: 'Yardsale Pizza',
-      amount: 12.45,
-      type: WITHDRAW
+      date: '19/02',
+      item: 'Drinks! 😎🍺',
+      amount: 20,
+      type: DEPOSIT
     },
     {
       id: uuidv4(),
-      date: '20/2',
-      item: 'EE Phone bill',
-      amount: 45,
-      type: WITHDRAW
-    },
-    {
-      id: uuidv4(),
-      date: '20/2',
+      date: '20/02',
       item: 'Uber',
       amount: 7.91,
       type: WITHDRAW
     },
     {
       id: uuidv4(),
-      date: '19/2',
-      item: 'Drinks! 😎🍺',
-      amount: 20,
-      type: DEPOSIT
+      date: '20/02',
+      item: 'Yardsale Pizza',
+      amount: 12.45,
+      type: WITHDRAW
+    },
+    {
+      id: uuidv4(),
+      date: '20/02',
+      item: 'EE Phone bill',
+      amount: 45,
+      type: WITHDRAW
     },
   ],
 }
