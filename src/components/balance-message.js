@@ -13,8 +13,10 @@ const BalanceMessage = () => {
       setMessage(`We were only able to withdraw £${numberWithCommas(difference)}`)
     } else if (balance <= IN_OVERDRAFT) {
       setMessage("You're in your overdraft")
+    } else if (balance >= SAVING_REACHED) {
+      setMessage('Savings reached! Time to save')
     } else {
-      setMessage(`You're £${numberWithCommas(SAVING_REACHED - balance)} away from your goal!`)
+      setMessage(`You're £${numberWithCommas(SAVING_REACHED - balance)} away from your goal!`)      
     }
   }, [balance, difference])
 
