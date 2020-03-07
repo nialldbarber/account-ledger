@@ -29,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: ${props => props.theme.font};
+    filter: blur(0.5px);
 
     &:after {
       content: '';
