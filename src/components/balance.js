@@ -15,7 +15,9 @@ const Balance = () => {
         <img src={logo} alt="Logo" />
       </Header>
       <p className="strapline">Current Balance</p>
-      <BalanceAmount className={ACCOUNT_COLOUR_MAP[getAccountClassName(balance)]}>£{numberWithCommas(balance)}</BalanceAmount>
+      <BalanceAmount className={ACCOUNT_COLOUR_MAP[getAccountClassName(balance)]}>
+        <span>£{numberWithCommas(balance)}</span>
+      </BalanceAmount>
     </Container>
   )
 }
