@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { resizeDollar } from 'styles/utils/keyframes'
 
 export const Header = styled.h1`
   position: absolute;
@@ -11,6 +12,22 @@ export const Header = styled.h1`
   img {
     width: 100%;
     height: auto;
+  }
+
+  .dollar-sign {
+    position: absolute;
+    width: 30px;
+    top: 15px;
+    right: -55px;
+    animation: 1s ${resizeDollar} infinite;
+  }
+
+  .dancing-robot {
+    position: absolute;
+    width: 100px;
+    top: 90px;
+    left: -100px;
+    transform: rotate(-25deg);
   }
 `
 

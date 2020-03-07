@@ -1,13 +1,19 @@
 import { keyframes } from 'styled-components'
 
-export const perspectiveChange = keyframes`
+export const resizeDollar = keyframes`
   0% {
-    background-position: 0% 50%;
+    width: 30px;
   }
+
+  25% {
+    width: 40px;
+  }
+
   50% {
-    background-position: 100% 50%;
+    width: 60px;
   }
+
   100% {
-    background-position: 0% 50%;
+    width: 40px;
   }
 `
