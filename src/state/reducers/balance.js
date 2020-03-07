@@ -1,4 +1,4 @@
-import { DEPOSIT, WITHDRAW } from 'constants/transaction-types'
+import { DEPOSIT, WITHDRAW, SHOW_DIFFERENCE } from 'constants/transaction-types'
 
 export const balanceReducer = (state, action) => {
   switch (action.type) {
@@ -30,6 +30,11 @@ export const balanceReducer = (state, action) => {
           }
         ]        
       }
+    case SHOW_DIFFERENCE:
+      return {
+        ...state, 
+        difference: action.difference
+      }  
     default:
       return state  
   }

@@ -21,6 +21,16 @@ export const Container = styled.div`
   margin: 0 1rem 1rem;
 `
 
+export const ErrorMessage = styled.div`
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+
+  p {
+    margin: 0;    
+  }
+`
+
 export const AccountDetails = styled.div`
   display: flex;
   align-items: center;

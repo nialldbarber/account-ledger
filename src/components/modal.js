@@ -10,9 +10,9 @@ import { Button } from 'styles/button'
 import cross from 'assets/cross.svg'
 
 const Modal = ({ type, visibility }) => {
-  const { balance, addMoney, withdrawMoney } = useContext(BalanceContext)
+  const { balance, showDifference, addMoney, withdrawMoney } = useContext(BalanceContext)
   const { closeAllModals } = useContext(ModalContext)
-  const { values, handleChange } = useForm({
+  const { values, handleChange, resetValues } = useForm({
     id: '',
     date: '',
     item: '',
@@ -34,19 +34,21 @@ const Modal = ({ type, visibility }) => {
     if (type === 'deposit') {
       newItem.type = DEPOSIT
       addMoney(newItem)
-    } else {      
-      newItem.type = WITHDRAW
+      showDifference('')
+    } else {
       if (balance - amount < OVERDRAFT) {
         newItem.amount = parseFloat(balance - OVERDRAFT)
+        showDifference(newItem.amount)
       }
+      newItem.type = WITHDRAW
       withdrawMoney(newItem)     
     }
-
+    resetValues()
     closeAllModals()
   }
 
   return (
-    <Container className={visibility ? 'active' : ''}>
+    <Container className={visibility ? 'active' : ''}>      
       <div className="message">
         <p>{type}</p>
         <button className="exit" onClick={() => closeAllModals()}>

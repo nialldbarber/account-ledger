@@ -12,10 +12,10 @@ const Balance = () => {
   return (
     <Container>
       <Header>
-        <img src={logo} alt=""/>
+        <img src={logo} alt="Logo" />
       </Header>
       <p className="strapline">Current Balance</p>
-      <BalanceAmount className={ACCOUNT_COLOUR_MAP[getAccountClassName(balance)]}>{balance}</BalanceAmount>
+      <BalanceAmount className={ACCOUNT_COLOUR_MAP[getAccountClassName(balance)]}>£{balance}</BalanceAmount>
     </Container>
   )
 }

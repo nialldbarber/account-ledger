@@ -8,9 +8,12 @@ const useForm = (initialState = {}) => {
     setValue({ ...values, [name]: value })
   }
 
+  const resetValues = () => setValue(initialState)
+
   return {
     values,
-    handleChange
+    handleChange,
+    resetValues
   }
 }
 
