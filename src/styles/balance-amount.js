@@ -6,9 +6,9 @@ export const Container = styled.div`
     margin: 1rem 0 0 1rem;
     text-align: right;
     font-style: italic;
-    color: #4e474e;
+    color: ${props => props.theme.darkerGrey};
     font-size: 1.5rem;
-    padding-right: 1.5rem;    
+    padding-right: 1.5rem;
   }
 `
 
@@ -19,9 +19,9 @@ export const BalanceAmount = styled.p`
   font-style: italic;
   text-align: center;
   font-size: 5rem;
-  color: #4e474e;
+  color: ${props => props.theme.darkerGrey};
   text-align: right;
-  background: white;
+  background: ${props => props.theme.white};
   ${borderMixin};
 
   &.saving-reached {

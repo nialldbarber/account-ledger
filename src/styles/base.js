@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    transition: color .1s ease;
+    transition: color 0.1s ease;
   }
 
   ul {
@@ -73,7 +73,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow: auto;
     background: ${props => props.theme.grey};
     margin: 5rem auto 0rem;
-    background-color: silver;
+    background-color: ${props => props.theme.grey};
     padding: 3rem 1rem 1rem 1rem;
     ${borderMixin};
   }

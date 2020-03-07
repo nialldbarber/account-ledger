@@ -37,7 +37,7 @@ export const Controls = styled.div`
 `
 
 export const Button = styled.button`
-  border: 1px solid black;
+  border: 1px solid ${props => props.theme.black};
   font-size: 1.5rem;
   margin-left: 1rem;
   ${buttonMixin};

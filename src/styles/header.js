@@ -17,8 +17,8 @@ export const Header = styled.h1`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 7fr 4fr;
-  border-bottom: 1px solid ${props => props.theme.darkGrey};
   margin: 0 1rem 1rem;
+  border-bottom: 1px solid ${props => props.theme.darkGrey};
 `
 
 export const ErrorMessage = styled.div`
@@ -38,11 +38,10 @@ export const AccountDetails = styled.div`
   padding-right: 1rem;
 
   p {
-    color: ${props => props.theme.white};
-    border: 1px solid ${props => props.theme.black};
     margin-left: 1rem;
-    background: ${props => props.theme.grey};
     padding: 0.5rem 1rem;
+    color: ${props => props.theme.white};
+    background: ${props => props.theme.grey};
     border-top: 1px solid ${props => props.theme.white};
     border-left: 1px solid ${props => props.theme.white};
     border-right: 1px solid ${props => props.theme.grey};

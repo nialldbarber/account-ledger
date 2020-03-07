@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 
 export const borderMixin = css`
-  border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+  border-color: ${props => props.theme.lightGrey} ${props => props.theme.darkerGrey} ${props => props.theme.darkerGrey} ${props => props.theme.lightGrey};
   border-style: solid;
   border-width: 5px;
 `

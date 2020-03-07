@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import { buttonMixin } from 'styles/utils/mixins'
 
 export const Container = styled.div`  
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;  
-  display: none;
 
   &.active {
     display: block;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     top: 0;
     height: 40px;
     color: ${props => props.theme.white};
-    background: linear-gradient(to right,${props => props.theme.darkBlue},${props => props.theme.lightBlue});
+    background: linear-gradient(to right, ${props => props.theme.darkBlue}, ${props => props.theme.lightBlue});
 
     p {
       margin: 0.5rem 1rem;
