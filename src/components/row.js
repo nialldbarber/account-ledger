@@ -8,7 +8,7 @@ const Row = () => {
 
   return (
     <div>
-      {transactions.map(({ id, date, amount, item, type }) => (
+      {transactions.reverse().map(({ id, date, amount, item, type }) => (
         <RowLine key={id}>
           <p>{date}</p>
           <p>{item}</p>
