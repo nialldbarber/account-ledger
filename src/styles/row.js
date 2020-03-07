@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export const RowContainer = styled.div`
+  display: flex; 
+  flex-direction: column-reverse;
+`
+
 export const RowLine = styled.div`
   display: grid;
   grid-template-columns: 100px 1fr 100px;
