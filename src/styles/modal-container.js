@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   position: fixed;
-  top: 50%;
+  top: calc(50% - 3rem);
   left: 50%;
   transform: translate(-50%, -50%);
   background: ${props => props.theme.grey};
@@ -28,7 +28,7 @@ export const WrapperInner = styled.div`
 
 export const ModalBackground = styled.div`
   position: fixed;
-  top: 0;
+  top: -5rem;
   left: 0;
   bottom: 0;
   right: 0;

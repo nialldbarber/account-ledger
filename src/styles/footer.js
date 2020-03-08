@@ -5,5 +5,9 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: center;
   height: 90px;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+
+  img {
+    margin: 0 1rem;
+  }
 `

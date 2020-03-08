@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { BalanceContext } from 'state/context/balance'
+import { numberWithCommas } from 'utils'
 import Balance from 'components/balance'
 import AddWithdraw from 'components/add-withdraw'
 import BalanceMessage from 'components/balance-message'
@@ -18,7 +19,7 @@ const Header = () => {
       <BalanceMessage />
       <AccountDetails>
         <p className="overdraft">Overdraft: £250</p>
-        <p className="available">Available: £{balance - OVERDRAFT}</p>
+        <p className="available">Available: £{numberWithCommas(balance - OVERDRAFT)}</p>
         <p className="target">Saving Target: £4,000</p>
       </AccountDetails>
     </>

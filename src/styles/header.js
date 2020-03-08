@@ -33,7 +33,7 @@ export const Header = styled.h1`
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 7fr 4fr;
+  grid-template-columns: 7fr 3fr;
   margin: 0 1rem 1rem;
   border-bottom: 1px solid ${props => props.theme.darkGrey};
 `

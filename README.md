@@ -1,7 +1,8 @@
 # 90's Account Ledger
 
-- Todo: description of what I've done
-- More things I could have done
+### Things I would've added if I had more time:
+- Testing with Jest
+- Make it better responsively
 
 ---
 
@@ -31,9 +32,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
