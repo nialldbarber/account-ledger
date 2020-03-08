@@ -1,9 +1,5 @@
 # 90's Account Ledger
 
-### Things I would've added if I had more time:
-- Testing with Jest
-- Make it better responsively
-
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
